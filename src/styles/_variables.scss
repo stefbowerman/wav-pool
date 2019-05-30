@@ -43,7 +43,7 @@ $link-hover-decoration:                   underline !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   2rem !default;
 
 // Grid breakpoints
 //
@@ -55,7 +55,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1440px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -70,7 +71,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
+  xxl: 1400px
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -98,7 +100,7 @@ $border-width:                1px !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      'Akzidenz Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -110,11 +112,14 @@ $font-size-sm:                $font-size-base * .875 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.4 !default;
+$line-height-lg:              $line-height-base * 1.25;
+$line-height-sm:              $line-height-base * 0.875;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
@@ -126,7 +131,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-medium !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -137,6 +142,15 @@ $hr-height:                   $border-width !default;
 $hr-opacity:                  .25 !default;
 
 $hr-margin-y:                 $spacer !default;
+
+$p0-font-size:                $h1-font-size;
+$p0-line-height:              1;
+
+$p1-font-size:                $font-size-lg;
+$p1-line-height:              $line-height-base;
+
+$p2-font-size:                $font-size-sm;
+$p2-line-height:              $line-height-sm;
 
 // Forms
 

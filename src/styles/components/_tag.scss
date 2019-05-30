@@ -1,5 +1,6 @@
 .tag {
-  font-size: 90px;
+  font-size: 96px;
+  line-height: 105px;
   text-transform: uppercase;
   width: 1500px;
   position: relative;
@@ -14,10 +15,10 @@
   &:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -8px;
     left: 0;
-    right: 0;
-    height: 5px;
+    right: 6px;
+    height: 6px;
     background-color: #111;
   }
 }

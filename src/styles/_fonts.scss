@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('../fonts/AkzidenzGroteskBQ-Reg.eot?#iefix');
+  src: url('../fonts/AkzidenzGroteskBQ-Reg.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Reg.otf') format('opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Reg.woff') format('woff'),
+       url('../fonts/AkzidenzGroteskBQ-Reg.ttf') format('truetype'),
+       url('../fonts/AkzidenzGroteskBQ-Reg.svg#AkzidenzGroteskBQ-Reg') format('svg');
+  font-weight: $font-weight-normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('../fonts/AkzidenzGroteskBQ-Medium.eot?#iefix');
+  src: url('../fonts/AkzidenzGroteskBQ-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Medium.otf') format('opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Medium.woff') format('woff'),
+       url('../fonts/AkzidenzGroteskBQ-Medium.ttf') format('truetype'),
+       url('../fonts/AkzidenzGroteskBQ-Medium.svg#AkzidenzGroteskBQ-Medium') format('svg');
+  font-weight: $font-weight-medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('../fonts/AkzidenzGroteskBQ-Bold.eot?#iefix');
+  src: url('../fonts/AkzidenzGroteskBQ-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Bold.otf') format('opentype'),
+       url('../fonts/AkzidenzGroteskBQ-Bold.woff') format('woff'),
+       url('../fonts/AkzidenzGroteskBQ-Bold.ttf') format('truetype'),
+       url('../fonts/AkzidenzGroteskBQ-Bold.svg#AkzidenzGroteskBQ-Bold') format('svg');
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}

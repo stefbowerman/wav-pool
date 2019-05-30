@@ -3,4 +3,33 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  padding: $grid-gutter-width/2 0;
+
+  nav {
+    text-align: right;
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin: 0 3px;
+        padding: 0 3px;
+
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
 }

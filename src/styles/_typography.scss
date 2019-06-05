@@ -9,9 +9,8 @@
 
 @mixin outline-title {
   @include outline-text;
-  font-size: 120px;
-  margin-bottom: 10vh;
-  margin-left: -15px;
+  font-size: 160px;
+  line-height: 0.95;
 }
 
 @mixin outline-subtitle {
@@ -49,6 +48,18 @@
 
 .outline-subtitle {
   @include outline-subtitle;
+}
+
+a.outline-subtitle {
+  transition: all 150ms ease-in;
+
+  &:hover {
+    transition-timing-function: ease-out;
+    color: transparent;
+    text-decoration: none;
+    -webkit-text-stroke-color: $bright-green;
+    text-stroke-color: $bright-green;
+  }
 }
 
 .p0 {

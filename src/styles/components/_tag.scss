@@ -1,9 +1,17 @@
+.tag-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .tag {
   font-size: 96px;
   line-height: 105px;
   text-transform: uppercase;
   width: 1500px;
   position: relative;
+  top: -5vh;
 }
 
 .tag-swap {
@@ -27,9 +35,9 @@
   display: inline-block;
 }
 
-.tag-image-container {
+.tag-line-gallery-container {
   position: absolute;
-  top: -2vh;
+  top: -15vh;
   bottom: -39vh;
   z-index: -1;
   right: 28%;
@@ -37,7 +45,8 @@
   right: 26%;
   left: 36%;
 }
-.tag-images {
+
+.tag-line-gallery {
   height: 100%;
   position: absolute;
   top: 0;
@@ -46,15 +55,15 @@
   left: 0;
   
   img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  /* top: 0; */
-  /* right: 0; */
-  /* left: 0; */
-  /* bottom: 0; */
+    -o-object-fit: contain;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* top: 0; */
+    /* right: 0; */
+    /* left: 0; */
+    /* bottom: 0; */
     opacity: 0;
     
     &.is-active {

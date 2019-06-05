@@ -9,7 +9,12 @@
 @import "utilities";
 
 section {
+  position: relative;
   padding: 15vh 0;
+
+  &:first-of-type {
+    padding-top: 0;
+  }
 }
 
 @keyframes globe-rotate {
@@ -31,6 +36,9 @@ section {
   animation: globe-rotate 15s linear infinite;
 }
 
-section {
-  position: relative;
+.section-header {
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  transform: translateX(-15px);
 }

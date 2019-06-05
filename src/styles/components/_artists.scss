@@ -1,0 +1,42 @@
+.artist-list {
+  @include wav-list;
+
+  li {
+    cursor: pointer;
+
+    &:after {
+      content: "->";
+      display: inline-block;
+      margin-left: 10px;
+      opacity: 0;
+    }
+
+    &.is-active {
+      color: red;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.artist-portrait {
+  // height: 700px;
+  // width: 700px;
+  // position: absolute;
+  // top: -20vh;
+  // right: 3vw;
+
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+
+  &.is-active {
+    opacity: 1;
+  }
+}

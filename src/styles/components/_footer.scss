@@ -1,3 +1,13 @@
 footer {
-  padding: $grid-gutter-width/2 0;
+  padding: $grid-gutter-width 0;
+
+  ul {
+    list-style: none;
+    @include p2;
+
+    li {
+      display: inline-block;
+      margin: 0 3px;
+    }
+  }
 }

@@ -6,12 +6,7 @@
 }
 
 .client-list {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  list-style: none;
-  font-size: $font-size-lg;
-  line-height: 1.45;
+  @include wav-list;
 
   &:nth-child(2n) {
     text-align: center;
@@ -20,4 +15,33 @@
   &:nth-child(3n) {
     text-align: right;
   }
+}
+
+.client-banner {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #63dffb;
+  transform: translateY(-50%);
+  transition: background-color 1000ms ease;
+}
+
+.client-banner-logos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: {
+    image: url('../images/client-logos/nike.jpg');
+    size: auto 116%;
+    repeat: repeat-x;
+    position: -10% center;
+  }
+  z-index: -1;
+  mix-blend-mode: screen;
+  transition: background-position 15s linear;
 }

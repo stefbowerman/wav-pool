@@ -1,29 +1,68 @@
-.outline-title {
-  font-size: 120px;
+@mixin outline-text {
   letter-spacing: -0.016em;
   font-weight: $font-weight-bold;
-  color: $white;
+  color: transparent;
   text-transform: uppercase;
   text-stroke: 2.3px $black;
-  -webkit-text-stroke: 2.3px $black;
+  -webkit-text-stroke: 2.3px $black; // 0.019em
+}
+
+@mixin outline-title {
+  @include outline-text;
+  font-size: 120px;
   margin-bottom: 10vh;
   margin-left: -15px;
 }
 
-.p0 {
+@mixin outline-subtitle {
+  @include outline-text;
+  font-size: 85px;
+}
+
+@mixin p0 {
   font-size: $p0-font-size;
   line-height: $p0-line-height;
   text-transform: uppercase;
 }
 
-.p1 {
+@mixin p1 {
   font-size: $p1-font-size;
   line-height: $p1-line-height;
   text-transform: uppercase;
 }
 
-.p2 {
+@mixin p2 {
   font-size: $p2-font-size;
   line-height: $p2-line-height;
   text-transform: uppercase;
+}
+
+@mixin p3 {
+  font-size: $p3-font-size;
+  line-height: $p3-line-height;
+  text-transform: uppercase;
+}
+
+.outline-title {
+  @include outline-title;
+}
+
+.outline-subtitle {
+  @include outline-subtitle;
+}
+
+.p0 {
+  @include p0;
+}
+
+.p1 {
+  @include p1;
+}
+
+.p2 {
+  @include p2;
+}
+
+.p3 {
+  @include p3;
 }

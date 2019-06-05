@@ -20,11 +20,16 @@
       </div>
     </div>
   </header>
-  <section id="hero" style="padding-bottom: 40vh;">
+  <section id="hero" style="padding-bottom: 40vh;" data-component="tag">
     <div class="container">
       <div class="tag">
         Music<br />licensing<br />for
-        <div class="tag-swap">Television</div>
+        <div class="tag-swap">
+          <div class="tag-line">Film</div>
+          <div class="tag-line" style="display: none">Advertising</div>
+          <div class="tag-line" style="display: none">Branded Content</div>
+          <div class="tag-line" style="display: none">Games</div>
+        </div>
         <div class="tag-image-container">
           <div class="tag-images">
             <img src="https://66.media.tumblr.com/b553d6dc28265fff34e1eb99651fdc32/tumblr_of74m84VAP1qb141to1_500.jpg" class="is-active"/>
@@ -45,47 +50,94 @@
       </div>
     </div>
     <div class="container">
-      <div style="margin: 300px 0 0;">
+      <div style="min-height: 100vh; padding: 200px 0; display: flex; align-items: center; justify-content: center; flex-direction: column;">
         <div class="p0 text-center" style="max-width: 23em; margin: 0 auto;">We &nbsp;&nbsp;represent &nbsp;real &nbsp;&nbsp;&nbsp;artists &nbsp;&nbsp;from &nbsp;all &nbsp;&nbsp;&nbsp;over the &nbsp;world &nbsp;for &nbsp;&nbsp;placement in &nbsp;film &nbsp;&nbsp;&nbsp;and &nbsp;&nbsp;&nbsp;&nbsp;content.</div>
-        <div style="max-width: 36vw;margin: 0 auto;position: relative;z-index: -1;margin-top: -23%;"><div class="globe"></div></div>
+        <div style="width: 36vw; max-width: 600px; margin: 0 auto;position: absolute;z-index: -1;"><div class="globe"></div></div>
       </div>
     </div>
   </section>
-  <section>
+  <section data-component="artists">
     <h2 class="outline-title">Our Artists</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-4">
+          <ul class="artist-list">
+            <li>2econd Class Citizen</li>
+            <li>DDay One</li>
+            <li>Ean</li>
+            <li>Egadz</li>
+            <li>Eraserface</li>
+            <li>Great Dane</li>
+            <li>Free The Robots</li>
+            <li>Ilia Gorovitz</li>
+            <li>Mumbles</li>
+            <li>2 Tall</li>
+            <li>Cars and Trains</li>
+            <li>DJ Pain 1</li>
+            <li>Edison</li>
+            <li>Elusive</li>
+            <li>&nbsp;</li>
+            <li>...and more</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="artist-gallery">
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+      <div class="artist-portrait"></div>
+    </div>    
   </section>
   <section>
     <h2 class="outline-title">Clients</h2>
-    <div class="container">
-      <div class="clients">
-        <ul class="client-list">
-          <li>Oakley</li>
-          <li>Adidas</li>
-          <li>Red Bull</li>
-          <li>DC Shoe Co</li>
-          <li>Monster</li>
-          <li>Obey</li>
-          <li>Vans</li>
-        </ul>
-        <ul class="client-list">
-          <li>Undefeated</li>
-          <li>Stance</li>
-          <li>Mountain Dew</li>
-          <li>Lagunitas Brewing</li>
-          <li>Fitbit</li>
-          <li>Element</li>
-          <li>Huf</li>
-        </ul>
-        <ul class="client-list">
-          <li>HBO</li>
-          <li>Cinemax</li>
-          <li>Marmot</li>
-          <li>Fox Racing</li>
-          <li>Epix</li>
-          <li>Fueltv</li>
-          <li>411vm</li>
-        </ul>
+    <div style="position: relative">
+      <div class="container">
+        <div class="clients">
+          <ul class="client-list">
+            <li>Nike</li>
+            <li>Adidas</li>
+            <li>Red Bull</li>
+            <li>DC Shoe Co</li>
+            <li>Monster</li>
+            <li>Obey</li>
+            <li>Vans</li>
+          </ul>
+          <ul class="client-list">
+            <li>Undefeated</li>
+            <li>Stance</li>
+            <li>Mountain Dew</li>
+            <li>Lagunitas Brewing</li>
+            <li>Oakley</li>
+            <li>Element</li>
+            <li>Huf</li>
+          </ul>
+          <ul class="client-list">
+            <li>HBO</li>
+            <li>Cinemax</li>
+            <li>Marmot</li>
+            <li>Fox Racing</li>
+            <li>Fitbit</li>
+            <li>Fueltv</li>
+            <li>411vm</li>
+          </ul>
+        </div>
       </div>
+      <div class="client-banner">
+        <div class="client-banner-logos"></div>
+      </div>      
     </div>
   </section>   
   <section>
@@ -407,11 +459,20 @@
   </section>
   <section id="closing" class="text-center">
     We're here to help
-    <h2 class="outline-title">info@wav-pool.com</h2>
+    <h2 class="outline-subtitle">info@wav-pool.com</h2>
   </section>
   <footer>
-    <div class="container-fluid text-center p2">
-      2019 .Wav Pool.  All forms of media displayed on this website are copyright protected.
+    <div class="container-fluid text-center">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/catalog">Catalog</a></li>
+        <li><a href="/">Contact</a></li>
+        <li><a href="http://www.egadz.net/privacy" target="_blank">Privacy</a></li>
+        <li><a href="http://www.electric-life.org/faq" target="_blank">FAQ</a></li>
+      </ul>
+      <div class="p3">
+        2019 .Wav Pool.  All forms of media displayed on this website are copyright protected.
+      </div>
     </div>
   </footer>
 </body>

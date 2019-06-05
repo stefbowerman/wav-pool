@@ -1,21 +1,17 @@
 import '../styles/index.scss';
 
-const imgs = document.querySelectorAll('.tag-images img');
-let currIndex = 0;
-const imgCount = imgs.length;
+import TagComponent from './components/tag';
+import ArtistsComponent from './components/artists';
 
-console.log(imgs);
+const componentMap = {
+  tag: TagComponent,
+  artists: ArtistsComponent
+};
 
-setInterval(() => {
-  imgs.forEach((img) => {
-    img.classList.remove('is-active');
-  });
-  
-  let newIndex = currIndex == (imgCount-1) ? 0 : currIndex+1;
-  
-  let newActive = imgs[newIndex];
-    
-  newActive.classList.add('is-active');
-  
-  currIndex = newIndex;
-}, 150);
+for (const prop in componentMap) {
+  const componentEls = document.querySelectorAll(`[data-component="${prop}"]`);
+
+  for (const el of componentEls) {
+    new componentMap[prop](el);
+  }
+}

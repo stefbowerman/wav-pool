@@ -1,0 +1,9 @@
+@mixin wav-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  list-style: none;
+  font-size: $font-size-lg;
+  line-height: 1.45;
+}

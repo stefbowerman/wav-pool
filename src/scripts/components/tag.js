@@ -64,7 +64,7 @@ export default class TagComponent extends BaseComponent {
 
     this.tagLineComponents[this.currentIndex].activate();
 
-    // setInterval(this.activateNext.bind(this), 2000);
+    setInterval(this.activateNext.bind(this), 2000);
   }
 
   activateNext() {

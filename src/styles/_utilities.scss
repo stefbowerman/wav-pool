@@ -9,3 +9,15 @@
 .fs-lg {
   font-size: $font-size-lg;
 }
+
+.hide-on-mobile {
+  @include media-breakpoint-down('sm') {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include media-breakpoint-up('md') {
+    display: none;
+  }
+}

@@ -1,5 +1,6 @@
 header {
   position: fixed;
+  z-index: $z-index-header;
   top: 0;
   left: 0;
   right: 0;
@@ -7,8 +8,16 @@ header {
 
   nav {
     text-align: right;
+    display: none;
+
+    @include media-breakpoint-up('sm') {
+      display: block;
+    }
+
     ul {
       list-style: none;
+      margin: 0;
+      padding: 0;
 
       li {
         display: inline-block;
@@ -31,5 +40,9 @@ header {
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  @include media-breakpoint-up('sm') {
+    justify-content: space-between;
+  }  
 }

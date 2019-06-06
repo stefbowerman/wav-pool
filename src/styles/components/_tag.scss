@@ -6,28 +6,50 @@
 }
 
 .tag {
-  font-size: 96px;
-  line-height: 105px;
-  text-transform: uppercase;
-  width: 1500px;
   position: relative;
-  top: -5vh;
+  top: -5vh;  
+  font-size: 50px;
+  line-height: 55px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up('sm') {
+    font-size: 96px;
+    line-height: 105px;
+    max-width: 85vw;
+    margin: 0 auto;
+  }
+}
+
+.tag-row {
+  @include media-breakpoint-up('sm') {
+    display: flex;  
+  }
 }
 
 .tag-swap {
+  flex: 1;
   position: relative;
-  display: inline-block;
-  width: 1000px;
   text-align: right;
+  margin-top: 30px;
+
+  @include media-breakpoint-up('sm') {
+    margin-top: 0;
+  }
   
   &:after {
     content: '';
     position: absolute;
     bottom: -8px;
-    left: 0;
-    right: 6px;
-    height: 6px;
-    background-color: #111;
+    left: 3px;
+    right: 3px;
+    height: 4px;
+    background-color: $black;
+
+    @include media-breakpoint-up('sm') {
+      left: 20px;
+      right: 6px;
+      height: 6px;
+    }
   }
 }
 
@@ -37,13 +59,22 @@
 
 .tag-line-gallery-container {
   position: absolute;
-  top: -15vh;
+  top: 0;
   bottom: -39vh;
   z-index: -1;
-  right: 28%;
   opacity: 0.85;
-  right: 26%;
-  left: 36%;
+  right: 5%;
+  left: 20%;
+
+  @include media-breakpoint-up('sm') {
+    right: 10%;
+    left: 30%;
+  }
+
+  @include media-breakpoint-up('lg') {
+    top: -15vh;
+    left: 45%;
+  }
 }
 
 .tag-line-gallery {

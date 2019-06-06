@@ -1,3 +1,5 @@
+import { throttle } from 'throttle-debounce';
+
 export default class BaseComponent {
   constructor(container, name) {
     this.container = container;
@@ -5,12 +7,10 @@ export default class BaseComponent {
     this.name = name;
     this.namespace = `.${this.name}`;
 
-    this.events = {
-      SCROLL: `scroll${this.namespace}`,
-      CLICK:  `click${this.namespace}`,
-      RESIZE: `resize${this.namespace}`,
-      MOUSEENTER: `mouseenter${this.namespace}`,
-      MOUSELEAVE: `mouseleave${this.namespace}`
-    };
+    window.addEventListener('resize', throttle(100, this.onResize.bind(this)));
+  }
+
+  onResize() {
+    
   }
 }

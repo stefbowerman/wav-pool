@@ -1,0 +1,52 @@
+@keyframes globe-rotate {
+  0% { transform: rotate3d(1, 1, 1, 0deg); }
+  50% { transform: rotate3d(1, 1, 1, 180deg); }
+  100% { transform: rotate3d(1, 1, 1, 360deg); }
+}
+
+.globe-wrapper {
+  width: 120%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+
+  @include media-breakpoint-up('lg') {
+    width: 38vw;
+    max-width: 750px;
+  }
+}
+
+.globe {
+  background: {
+    image: url('../images/globe.png');
+    size: cover;
+  }
+  height: 0;
+  width: 100%;
+  padding-bottom: 102.4%;
+  margin: 0 auto;
+  position: relative;
+  animation: globe-rotate 15s linear infinite;
+}
+
+.globe-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 300px;
+  padding: 100px 0;
+
+  @include media-breakpoint-up('sm') {
+    min-height: 80vh;
+    margin-top: 100px;
+  }
+}
+
+.globe-text {
+  text-align: center;
+  max-width: 23em;
+  margin: 0 auto;
+  @include p0;
+}

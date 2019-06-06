@@ -155,8 +155,22 @@ $p2-font-size:                $font-size-sm;
 $p2-line-height:              $line-height-sm;
 
 $p3-font-size:                $font-size-xs;
-$p3-line-height:              $line-height-sm;
+$p3-line-height:              $line-height-lg;
 
 // Forms
 
 $label-margin-bottom:                   .5rem !default;
+
+// Stacking
+
+$z-index-header: 100;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+$btn-border-width:            2px !default;
+$btn-font-family:             $font-family-base !default;
+$btn-font-size:               $font-size-lg !default;
+$btn-line-height:             $line-height-base !default;
+$btn-font-weight:             $font-weight-normal !default;
+$btn-disabled-opacity:        .65 !default;

@@ -3,6 +3,7 @@ footer {
 
   ul {
     list-style: none;
+    padding-left: 0;
     @include p2;
 
     li {

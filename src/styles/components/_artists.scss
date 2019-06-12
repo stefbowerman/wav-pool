@@ -2,45 +2,62 @@
   @include wav-list;
 
   li {
-    cursor: pointer;
+    position: relative;
+  }
+}
+
+.artist-link {
+  display: inline-block;
+
+  // &:after {
+  //   content: "->";
+  //   display: inline-block;
+  //   margin-left: 10px;
+  //   opacity: 0;
+  // }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+    opacity: 0;
+    height: 14px;
+    width: 26px;
+    background: {
+      image: url('../images/arrow-right.png');
+      size: cover;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &.is-active {
+    color: red;
 
     &:after {
-      content: "->";
-      display: inline-block;
-      margin-left: 10px;
-      opacity: 0;
+      opacity: 1;
     }
+  }
 
-    &.is-active {
-      color: red;
-
-      &:after {
-        opacity: 1;
-      }
-    }
-
-    @include media-breakpoint-down('sm') {
-      padding: 2.5vh 0;
-    }
+  @include media-breakpoint-down('sm') {
+    padding: 2.5vh 0;
   }
 }
 
 .artist-portrait {
-  height: 700px;
-  width: 700px;
+  height: 50vw;
+  width: 50vw;
   position: absolute;
-  top: -20vh;
-  right: 3vw;
-
-  // height: 100vh;
-  // width: 100vh;
-  // position: fixed;
-  top: 0;
-  right: 0;
+  top: 50%;
+  left: 0;
   opacity: 0;
   z-index: -1;
+  transform: translate(25%, -50%);
 
-  &.is-active {
+  .artist-link.is-active & {
     opacity: 1;
   }
 }

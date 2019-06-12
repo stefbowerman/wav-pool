@@ -21,32 +21,32 @@ export default class ArtistsComponent extends BaseComponent {
     super(container, 'artists');
 
     this.list = container.querySelector('ul');
-    this.listItems = this.list.querySelectorAll('li');
+    this.links = this.list.querySelectorAll('a');
     this.portraits = container.querySelectorAll('.artist-portrait');
     this.watcher = ScrollMonitor.create(this.list);
     this.activeIndex = 0;
     this.measurements = {};
 
-    this.setMeasurements();
+    // this.setMeasurements();
 
     this.portraits.forEach((el) => {
       el.style.backgroundColor = getRandomColor();
     });
 
-    // this.listItems.forEach((el, i) => {
-    //   el.addEventListener('mouseenter', this.onLIMouseenter.bind(this));
-    //   el.addEventListener('mouseleave', this.onLIMouseleave.bind(this));
+    this.links.forEach((el, i) => {
+      el.addEventListener('mouseenter', this.onLinkMouseenter.bind(this));
+      el.addEventListener('mouseleave', this.onLinkMouseleave.bind(this));
+    });
+
+    // const scrollHandler = this.onScroll.bind(this);
+
+    // this.watcher.enterViewport(() => {
+    //   document.addEventListener('scroll', scrollHandler);
     // });
 
-    const scrollHandler = this.onScroll.bind(this);
-
-    this.watcher.enterViewport(() => {
-      document.addEventListener('scroll', scrollHandler);
-    });
-
-    this.watcher.exitViewport(() => {
-      document.removeEventListener('scroll', scrollHandler);
-    });
+    // this.watcher.exitViewport(() => {
+    //   document.removeEventListener('scroll', scrollHandler);
+    // });
 
     // this.activateItem(this.listItems[0]); // activate the first one
 
@@ -66,35 +66,35 @@ export default class ArtistsComponent extends BaseComponent {
     };
   }
 
-  onLIMouseenter(e) {
+  onLinkMouseenter(e) {
     this.activateItem(e.currentTarget);
   }
 
-  onLIMouseleave(e) {
+  onLinkMouseleave(e) {
     this.deactivateItem(e.currentTarget);
   }
 
   activateItem(el) {
-    const i = [].indexOf.call(this.listItems, el);
+    // const i = [].indexOf.call(this.listItems, el);
 
     if(!el) return;
 
     el.classList.add(classes.listItemActive);
-    this.portraits[i].classList.add(classes.portraitActive);
-    this.activeIndex = i;
+    // this.portraits[i].classList.add(classes.portraitActive);
+    // this.activeIndex = i;
   }
 
   deactivateItem(el) {
-    const i = [].indexOf.call(this.listItems, el);
+    // const i = [].indexOf.call(this.listItems, el);
 
     if(!el) return;
 
     el.classList.remove(classes.listItemActive);
-    this.portraits[i].classList.remove(classes.portraitActive);
+    // this.portraits[i].classList.remove(classes.portraitActive);
   }
 
   onResize() {
-    this.setMeasurements();
+    // this.setMeasurements();
   }
 
   onScroll() {

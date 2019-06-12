@@ -19,9 +19,19 @@ section {
   }
 }
 
+.page-header {
+  max-width: 1800px;
+  margin: 15vh auto;
+  transform: translateX(-15px);
+}
+
 .section-header {
   max-width: 1800px;
   margin: 0 auto;
   margin-bottom: 150px;
   transform: translateX(-15px);
+}
+
+section.fs {
+  min-height: 100vh;
 }

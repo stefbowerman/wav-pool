@@ -7,21 +7,31 @@
 
 .tag {
   position: relative;
-  top: -5vh;  
-  font-size: 50px;
-  line-height: 55px;
+  top: -5vh;
+  max-width: 95%;
+  margin: 0 auto;
+  font-size: 40px;
+  line-height: 1.1;
   text-transform: uppercase;
 
   @include media-breakpoint-up('sm') {
-    font-size: 96px;
+    font-size: 53px;
+  }
+
+  @include media-breakpoint-up('lg') {
+    font-size: 72px;
     line-height: 105px;
     max-width: 85vw;
     margin: 0 auto;
   }
+
+  @include media-breakpoint-up('xl') {
+    font-size: 91px;
+  }
 }
 
 .tag-row {
-  @include media-breakpoint-up('sm') {
+  @include media-breakpoint-up('md') {
     display: flex;  
   }
 }
@@ -32,22 +42,27 @@
   text-align: right;
   margin-top: 30px;
 
-  @include media-breakpoint-up('sm') {
+  @include media-breakpoint-up('md') {
     margin-top: 0;
   }
   
   &:after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -6px;
     left: 3px;
     right: 3px;
-    height: 4px;
+    height: 3px;
     background-color: $black;
 
     @include media-breakpoint-up('sm') {
       left: 20px;
       right: 6px;
+      bottom: -8px;
+      height: 4px;
+    }
+
+    @include media-breakpoint-up('lg') {
       height: 6px;
     }
   }

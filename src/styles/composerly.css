@@ -1,0 +1,110 @@
+.track .transport .permalink, .track .transport .favorite, .side-container #signin-button, .side-container li[rel="favorites"] {
+  display: none;
+}
+
+body * {
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
+}
+
+body.noheader {
+  margin-top: 50px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.track .transport .permalink, .track .transport .favorite, .side-container #signin-button, .side-container li[rel="favorites"] {
+  display: none;
+}
+
+.side-container,
+.menu-toggle-button {
+  display: none;
+}
+
+.main-container {
+  left: 0;
+}
+
+.search-wrapper .querytag {
+  font-size: 1.4em !important;
+}
+
+.playlist-query-results .playlist-wrapper-item .playlist-top {
+  border-radius: 0;
+}
+
+.playlist-query-results .playlist-wrapper-item .playlist-bottom p.title {
+  font-weight: normal;
+}
+
+.jumboheader {
+  padding: 200px 0;
+  background-image: url(http://res.cloudinary.com/composerly/image/upload/w_1500,c_fill,g_center,q_80/fvicddlziprgpx7uhvol.jpg) !important;
+}
+
+.jumboheader .composer-wrapper {
+  display: none;
+}
+
+.small-label,
+.suggested-wrapper .help-block {
+  color: #000 !important;
+}
+
+/* Tag type elements */
+.suggested-wrapper .suggested .querytag,
+.suggested-wrapper .suggested .durationtag,
+.suggested-wrapper .suggested-alpha .querytag,
+.suggested-wrapper .suggested-alpha .durationtag,
+.track p .genre,
+.track .tags .tagselect,
+.track .playlist-list .playlist-items .playlist-wrapper-item {
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  color: inherit;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 1.2em;
+}
+
+.suggested-wrapper .suggested .querytag .count,
+.suggested-wrapper .suggested .durationtag .count,
+.suggested-wrapper .suggested-alpha .querytag .count,
+.suggested-wrapper .suggested-alpha .durationtag .count {
+  display: none;
+}
+
+/* Playlist display */
+.playlist-header-wrapper .header .info-wrapper .wrapper-left .artwork {
+  border-radius: 0;
+}
+
+.tracks-container {
+  padding: 0;
+}
+
+.tracks-container .small-label {
+  display: none;
+}
+
+/* Track playlist */
+.track .playlist-list {
+  margin-left: 0;
+}
+
+.track .playlist-list .playlist-items .playlist-wrapper-item {
+  font-size: 85%;
+  background-color: transparent !important;
+}
+
+.track .track-info .composer {
+  display: none;
+}
+
+.track .title {
+  color: #000 !important;
+}

@@ -1,16 +1,43 @@
 import BaseComponent from './base';
 
 class TagLineComponent {
-  constructor(line, gallery) {
+  constructor(line, gallery, onTypingComplete) {
     this.line = line;
+    this.currentIndex = 0;
+
+    this.fullText = this.line.textContent;
+    this.typedText = '';
+    this.typeTimeout = null;
+    this.onTypingComplete = (onTypingComplete && {}.toString.call(onTypingComplete) === '[object Function]' ? onTypingComplete : () => {}); // Make sure we have a callable function
+
     this.gallery = gallery;
     this.images = gallery.querySelectorAll('img');
     this.imageCount = this.images.length;
     this.interval = null;
-    this.currentIndex = 0;
   }
 
-  start() {
+  typeOut() {
+    const addLetter = () => {
+      this.typedText = this.fullText.substring(0, this.typedText.length + 1);
+      this.line.textContent = this.typedText;
+
+      if(this.fullText.length == this.typedText.length) {
+        clearTimeout(this.typeTimeout);
+        this.onTypingComplete();
+      }
+      else {
+        this.typeTimeout = setTimeout(addLetter, 90);
+      }
+    };
+
+    // Reset these variables before we start typing
+    this.line.textContent = '';
+    this.typedText        = '';
+
+    addLetter();
+  }
+
+  startGalleryRotation() {
     this.interval = setInterval(() => {
       this.images.forEach((img) => {
         img.classList.remove('is-active');
@@ -19,26 +46,25 @@ class TagLineComponent {
       let newIndex = this.currentIndex === (this.imageCount - 1) ? 0 : this.currentIndex + 1;
       
       this.images[newIndex].classList.add('is-active');
-        
-      // newActive.classList.add('is-active');
-      
+              
       this.currentIndex = newIndex;
-    }, 150);
+    }, 500);
   }
 
-  stop() {
+  stopGalleryRotation() {
     clearInterval(this.interval);
   }
 
   activate() {
-    this.line.style.display = 'block';
-    this.gallery.style.display = 'block';    
-    this.start();
+    this.line.style.display    = 'block';
+    this.gallery.style.display = 'block';
+    this.startGalleryRotation();
+    this.typeOut();
   }
 
   deactivate() {
-    this.stop();
-    this.line.style.display = 'none';
+    this.stopGalleryRotation();
+    this.line.style.display    = 'none';
     this.gallery.style.display = 'none';
   }
 }
@@ -56,15 +82,11 @@ export default class TagComponent extends BaseComponent {
     }
 
     this.currentIndex = 0;
-    this.tagLineComponents = [];
-
-    this.tagLines.forEach((el, i) => {
-      this.tagLineComponents.push(new TagLineComponent(el, this.tagLineGalleries[i]));
+    this.tagLineComponents = [].map.call(this.tagLines, (el, i) => {
+      return new TagLineComponent(el, this.tagLineGalleries[i], this.onTypingComplete.bind(this));
     });
 
     this.tagLineComponents[this.currentIndex].activate();
-
-    setInterval(this.activateNext.bind(this), 2000);
   }
 
   activateNext() {
@@ -74,5 +96,10 @@ export default class TagComponent extends BaseComponent {
     this.tagLineComponents[newIndex].activate();
 
     this.currentIndex = newIndex;
+  }
+
+  onTypingComplete() {
+    // Make sure that the timeout clock starts *after* the typing animation is complete
+    setTimeout(this.activateNext.bind(this), 2000);
   }
 }

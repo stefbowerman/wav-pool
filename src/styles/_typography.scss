@@ -9,13 +9,16 @@
 
 @mixin outline-title {
   @include outline-text;
-  font-size: 112px;
-  line-height: 0.9;
+  font-size: 160px;
+  font-size: calc(130px + 2vw);
+  line-height: 0.95;
 
-  @include media-breakpoint-up('md') {
-    font-size: 160px;
-    font-size: calc(130px + 2vw);
-    line-height: 0.95;
+  @include media-breakpoint-down('md') {
+    font-size: 90px;
+    font-size: calc(50px + 6vw);
+    text-stroke-width: 2px;
+    -webkit-text-stroke-width: 2px;  
+    line-height: 0.9;
   }
 }
 

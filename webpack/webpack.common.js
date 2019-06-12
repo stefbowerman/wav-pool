@@ -28,6 +28,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'catalog.html',
       template: Path.resolve(__dirname, '../src/catalog.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'faq.html',
+      template: Path.resolve(__dirname, '../src/faq.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'privacy.html',
+      template: Path.resolve(__dirname, '../src/privacy.html')
     })
   ],
   resolve: {
@@ -51,6 +59,10 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.(html)$/,
+        use: ['html-loader']
+      }
     ]
   }
 };

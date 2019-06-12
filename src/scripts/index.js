@@ -1,11 +1,15 @@
 import '../styles/index.scss';
 
+import ScrollMonitor from 'scrollmonitor';
+
 import TagComponent from './components/tag';
 import ArtistsComponent from './components/artists';
+import ClientsComponent from './components/clients';
 
 const componentMap = {
   tag: TagComponent,
-  artists: ArtistsComponent
+  artists: ArtistsComponent,
+  clients: ClientsComponent
 };
 
 for (const prop in componentMap) {
@@ -15,3 +19,12 @@ for (const prop in componentMap) {
     new componentMap[prop](el);
   }
 }
+
+// document.querySelectorAll('section').forEach((el, i) => {
+//   const watcher = ScrollMonitor.create(el, -300);
+
+//   watcher.enterViewport(() => {
+//     el.classList.add('is-visible');
+//     watcher.destroy();
+//   });
+// });

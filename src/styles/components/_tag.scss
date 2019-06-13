@@ -7,10 +7,10 @@
 
 .tag {
   position: relative;
-  top: -5vh;
+  top: -9vh;
   max-width: 95%;
   margin: 0 auto;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.1;
   text-transform: uppercase;
 
@@ -19,6 +19,7 @@
   }
 
   @include media-breakpoint-up('lg') {
+    top: -5vh;
     font-size: 72px;
     line-height: 105px;
     max-width: 85vw;
@@ -27,6 +28,10 @@
 
   @include media-breakpoint-up('xl') {
     font-size: 91px;
+  }
+
+  @media (min-width: 1800px) {
+    max-width: 1400px;
   }
 }
 

@@ -1,14 +1,17 @@
 import BaseComponent from './base';
+import isFunction from '../helpers/isFunction';
 
 class TagLineComponent {
-  constructor(line, gallery, onTypingComplete) {
+  constructor(line, gallery, onTypingComplete, onDeleteTextComplete) {
     this.line = line;
     this.currentIndex = 0;
 
     this.fullText = this.line.textContent;
     this.typedText = '';
     this.typeTimeout = null;
-    this.onTypingComplete = (onTypingComplete && {}.toString.call(onTypingComplete) === '[object Function]' ? onTypingComplete : () => {}); // Make sure we have a callable function
+    this.characterTimeoutDuration = this.fullText.length > 7 ? 60 : 120;
+    this.onTypingComplete = (isFunction(onTypingComplete) ? onTypingComplete : () => {});
+    this.onDeleteTextComplete = (isFunction(onDeleteTextComplete) ? onDeleteTextComplete : () => {});
 
     this.gallery = gallery;
     this.images = gallery.querySelectorAll('img');
@@ -23,10 +26,10 @@ class TagLineComponent {
 
       if(this.fullText.length == this.typedText.length) {
         clearTimeout(this.typeTimeout);
-        this.onTypingComplete();
+        this.onTypingComplete(this);
       }
       else {
-        this.typeTimeout = setTimeout(addLetter, 90);
+        this.typeTimeout = setTimeout(addLetter, this.characterTimeoutDuration);
       }
     };
 
@@ -35,6 +38,23 @@ class TagLineComponent {
     this.typedText        = '';
 
     addLetter();
+  }
+
+  deleteText() {
+    const removeLetter = () => {
+      this.typedText = this.fullText.substring(0, this.typedText.length - 1);
+      this.line.textContent = this.typedText;
+
+      if(this.typedText.length == 0) {
+        clearTimeout(this.typeTimeout);
+        this.onDeleteTextComplete(this);
+      }
+      else {
+        this.typeTimeout = setTimeout(removeLetter, this.characterTimeoutDuration);
+      }
+    };
+
+    removeLetter();
   }
 
   startGalleryRotation() {
@@ -83,7 +103,7 @@ export default class TagComponent extends BaseComponent {
 
     this.currentIndex = 0;
     this.tagLineComponents = [].map.call(this.tagLines, (el, i) => {
-      return new TagLineComponent(el, this.tagLineGalleries[i], this.onTypingComplete.bind(this));
+      return new TagLineComponent(el, this.tagLineGalleries[i], this.onTypingComplete.bind(this), this.onDeleteTextComplete.bind(this));
     });
 
     this.tagLineComponents[this.currentIndex].activate();
@@ -98,8 +118,12 @@ export default class TagComponent extends BaseComponent {
     this.currentIndex = newIndex;
   }
 
-  onTypingComplete() {
+  onTypingComplete(tagLine) {
     // Make sure that the timeout clock starts *after* the typing animation is complete
-    setTimeout(this.activateNext.bind(this), 2000);
+    setTimeout(tagLine.deleteText.bind(tagLine), 2000);
+  }
+
+  onDeleteTextComplete(tagLine) {
+    this.activateNext();
   }
 }

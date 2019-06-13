@@ -50,6 +50,8 @@
 .artist-portrait {
   height: 50vw;
   width: 50vw;
+  max-height: 600px;
+  max-width: 600px;
   position: absolute;
   top: 50%;
   left: 0;
@@ -59,5 +61,60 @@
 
   .artist-link.is-active & {
     opacity: 1;
+  }
+}
+
+.portrait-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  mix-blend-mode: overlay;
+  filter: brightness(1.5);
+
+  &--free-the-robots {
+    background-image: url('../images/artists/free-the-robots.jpg')
+  }
+
+  &--lealani {
+    background-image: url('../images/artists/lealani.jpg')
+  }
+
+  &--great-dane {
+    background-image: url('../images/artists/great-dane.jpg')
+  }
+
+  &--dj-nobody {
+    background-image: url('../images/artists/dj-nobody.jpg')
+  }
+
+  &--kenny-segal {
+    background-image: url('../images/artists/kenny-segal.jpg')
+  }
+
+  &--huxley-anne {
+    background-image: url('../images/artists/huxley-anne.jpg')
+  }
+
+  &--the-heavy-twelves {
+    background-image: url('../images/artists/the-heavy-twelves.jpg')
+  }
+
+  &--odd-nosdam {
+    background-image: url('../images/artists/odd-nosdam.jpg')
+  }
+
+  &--mophono {
+    background-image: url('../images/artists/mophono.jpg')
+  }
+
+  &--mumbles {
+    background-image: url('../images/artists/mumbles.jpg')
+  }
+
+  &--jel {
+    background-image: url('../images/artists/jel.jpg')
   }
 }

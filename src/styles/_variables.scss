@@ -38,7 +38,7 @@ $body-color:                $black !default;
 $link-color:                              #000 !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        lighten($link-color, 15%) !default;
-$link-hover-decoration:                   underline !default;
+$link-hover-decoration:                   none !default;
 
 // Paragraphs
 //
@@ -130,7 +130,7 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $spacer * 0.9 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        $font-weight-medium !default;

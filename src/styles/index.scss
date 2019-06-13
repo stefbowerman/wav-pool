@@ -21,8 +21,12 @@ section {
 
 .page-header {
   max-width: 1800px;
-  margin: 15vh auto;
+  margin: 15vh auto 8vh;
   transform: translateX(-15px);
+
+  @include media-breakpoint-up('md') {
+    margin-bottom: 15vh;
+  }
 }
 
 .section-header {
@@ -34,4 +38,10 @@ section {
 
 section.fs {
   min-height: 100vh;
+}
+
+.text-container {
+  @extend .container;
+  max-width: 45em;
+  margin: 0 auto;
 }

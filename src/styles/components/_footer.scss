@@ -1,5 +1,11 @@
+@keyframes footer-banner-animation {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
 footer {
-  padding: $grid-gutter-width*2 0 $grid-gutter-width/2;
+  padding: $grid-gutter-width*2 0 0;
+  overflow: hidden;
 
   ul {
     list-style: none;
@@ -9,6 +15,32 @@ footer {
     li {
       display: inline-block;
       margin: 0 8px;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    height: 75px;
+    height: calc(50px + 5vw);
+    width: 200%;
+    margin-top: $grid-gutter-width * 1.5;
+    background: {
+      color: $black;
+      size: auto 100%;
+      repeat: repeat-x;
+      position: 0% center;
+      image: url('../images/logo-small-inverted.jpg');
+    }
+    animation: footer-banner-animation 15s linear infinite;
+
+    @include media-breakpoint-up('md') {
+      margin-top: $grid-gutter-width * 2;
+      animation-duration: 30s;
+    }
+
+    @include media-breakpoint-up('xxl') {
+      height: 130px;
     }
   }
 }

@@ -3,8 +3,7 @@ import BaseComponent from './base';
 import * as Breakpoints from '../core/breakpoints';
 
 const classes = {
-  listItemActive: 'is-active',
-  portraitActive: 'is-active'
+  listItemActive: 'is-active'
 };
 
 function getRandomColor() {
@@ -146,7 +145,6 @@ export default class ArtistsComponent extends BaseComponent {
     this.links = this.list.querySelectorAll('a');
     this.portraits = container.querySelectorAll('.artist-portrait');
     this.watcher = ScrollMonitor.create(this.list);
-    this.activeIndex = 0;
     this.measurements = {};
 
     // this.setMeasurements();
@@ -199,22 +197,11 @@ export default class ArtistsComponent extends BaseComponent {
   }
 
   activateItem(el) {
-    // const i = [].indexOf.call(this.listItems, el);
-
-    if(!el) return;
-
-    el.classList.add(classes.listItemActive);
-    // this.portraits[i].classList.add(classes.portraitActive);
-    // this.activeIndex = i;
+    el && el.classList.add(classes.listItemActive);
   }
 
   deactivateItem(el) {
-    // const i = [].indexOf.call(this.listItems, el);
-
-    if(!el) return;
-
-    el.classList.remove(classes.listItemActive);
-    // this.portraits[i].classList.remove(classes.portraitActive);
+    el && el.classList.remove(classes.listItemActive);
   }
 
   onResize() {

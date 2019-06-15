@@ -4,17 +4,36 @@
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: $btn-border-width solid $body-color;
   padding: 10px 80px 10px 20px;
   font-size: $btn-font-size;
   line-height: $btn-line-height;
   text-transform: uppercase;
   border-radius: 0;
-  transition: all 300ms ease;
+
+  &,
+  &:before,
+  &:after {
+    transition: all 150ms ease;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+  }
+
+  // Outline
+  &:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: $btn-border-width solid $body-color;
+  }
 
   &:after {
     content: '';
@@ -33,6 +52,13 @@
   &:hover {
     color: $body-color;
     text-decoration: none;
+    transform: translateX(-10px);
+    // box-shadow: -6px 8px 0 0px $bright-red, -8px 10px 0px 0px $black, -4px 10px 0px 0px $black, -8px 6px 0px 0px $black;
+    box-shadow: -5px 6px 0 0px $bright-red, -7px 8px 0px 0px $black, -3px 8px 0px 0px $black, -7px 4px 0px 0px $black;
+
+    &:after {
+      transform: translate(30px, -50%)
+    }
   }
 
   &:focus,
@@ -45,5 +71,13 @@
   &:disabled {
     opacity: $btn-disabled-opacity;
     box-shadow: none;
+  }
+}
+
+.btn--block {
+  width: 100%;
+
+  & + & {
+    margin-top: $grid-gutter-width / 2;
   }
 }

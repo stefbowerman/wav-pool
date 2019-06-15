@@ -1,16 +1,21 @@
 import BaseComponent from './base';
 
+const classes = {
+  listItemActive: 'is-active'
+};
+
 export default class ClientsComponent extends BaseComponent {
   constructor(container) {
     super(container, 'clients');
 
     this.listItems = this.container.querySelectorAll('li');
+    this.bannerWrap = this.container.querySelector('.client-banner-wrap');
     this.banner = this.container.querySelector('.client-banner');
     this.activeItem = null;
 
     this.listItems.forEach((el, i) => {
       el.addEventListener('mouseenter', this.onLIMouseenter.bind(this));
-      // el.addEventListener('mouseleave', this.onLIMouseleave.bind(this));
+      el.addEventListener('mouseleave', this.onLIMouseleave.bind(this));
     });
 
     this.activateItem(this.listItems[0]); // activate the first one
@@ -20,9 +25,9 @@ export default class ClientsComponent extends BaseComponent {
     this.activateItem(e.currentTarget);
   }
 
-  // onLIMouseleave(e) {
-  //   this.deactivateItem(e.currentTarget);
-  // }
+  onLIMouseleave(e) {
+    this.deactivateItem(e.currentTarget);
+  }
 
   getItemSlug(el) {
     return el.textContent.toLowerCase().split(' ').join('-');
@@ -33,10 +38,8 @@ export default class ClientsComponent extends BaseComponent {
 
     this.deactivateItem(this.activeItem);
 
-    el.style.color = 'red';
+    el.classList.add(classes.listItemActive);
 
-    // const slug = this.getItemSlug(el);
-    // console.log(`adding class banner--${slug}`);
     this.banner.classList.add(`client-banner--${this.getItemSlug(el)}`);
 
     this.activeItem = el;
@@ -47,6 +50,6 @@ export default class ClientsComponent extends BaseComponent {
 
     this.banner.classList.remove(`client-banner--${this.getItemSlug(el)}`);
 
-    el.style.color = '';
+    el.classList.remove(classes.listItemActive);
   }
 }

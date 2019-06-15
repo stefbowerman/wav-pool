@@ -10,6 +10,11 @@ body.noheader {
   margin-top: 50px;
 }
 
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .footer-inner {
   display: flex;
   justify-content: center;
@@ -26,6 +31,7 @@ body.noheader {
 
 .main-container {
   left: 0;
+  right: 0;
 }
 
 .search-wrapper .querytag {
@@ -49,9 +55,57 @@ body.noheader {
   display: none;
 }
 
+.navbar-search {
+  margin-bottom: 30px;
+  position: absolute !important;
+  top: 0;
+  right: 0 !important;
+  left: auto !important;
+}
+
+.navbar-search input {
+  padding: 0.5em 1em 0.4em;
+  border: 1px solid black !important
+  color: black;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
 .small-label,
 .suggested-wrapper .help-block {
   color: #000 !important;
+}
+
+.small-label {
+  font-weight: normal;
+}
+
+.suggested-wrapper .suggested-sorting {
+  margin: 0 0 20px;
+}
+
+.suggested-wrapper .filter-buttons {
+  margin-bottom: 30px;
+}
+
+.suggested-wrapper .refine-by {
+  border-radius: 0 !important;
+  padding: 3px 19px 7px !important;
+  margin-right: 0;
+  border-bottom: 1px solid #DDD;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.suggested-wrapper .refine-by.active {
+  border-bottom-color: black;
+  background-color: transparent !important;
+}
+
+.suggested-wrapper .refine-by.active:hover {
+  background-color: transparent !important;
+  color: black !important;
 }
 
 /* Tag type elements */
@@ -62,13 +116,12 @@ body.noheader {
 .track p .genre,
 .track .tags .tagselect,
 .track .playlist-list .playlist-items .playlist-wrapper-item {
-  border: none;
+  border: 1px solid black !important;
   border-radius: 0;
   text-transform: uppercase;
   color: inherit;
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 1.2em;
+  padding: 2px 7px;
+  margin-right: 0.6em;
 }
 
 .suggested-wrapper .suggested .querytag .count,
@@ -78,9 +131,32 @@ body.noheader {
   display: none;
 }
 
+.track .playlist-list .playlist-items .playlist-wrapper-item {
+  font-size: inherit;
+}
+
+.track .tagselect, .querytag, .durationtag, .durationtag i, .querytag i {
+  color: black !important;
+}
+
+.playlist-query-results .playlist-wrapper-item .playlist-bottom {
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+
+.playlist-query-results .playlist-wrapper-item .playlist-bottom p.description {
+  font-size: 12px;
+  margin-top: 7px;
+  font-size: 12px;
+}
+
 /* Playlist display */
 .playlist-header-wrapper .header .info-wrapper .wrapper-left .artwork {
   border-radius: 0;
+}
+
+.playlist-header-wrapper .header .info-wrapper .wrapper-right .title {
+  font-family: inherit;
 }
 
 .tracks-container {
@@ -107,4 +183,17 @@ body.noheader {
 
 .track .title {
   color: #000 !important;
+}
+
+.track .transport li.timings,
+.track .transport li.timings.current {
+  font-family: inherit;
+}
+
+.footer-wrapper {
+  margin-top: 3em;
+}
+
+.footer-inner {
+  display: none !important;
 }

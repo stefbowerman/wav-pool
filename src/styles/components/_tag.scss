@@ -10,9 +10,13 @@
   top: -9vh;
   max-width: 95%;
   margin: 0 auto;
-  font-size: 36px;
+  font-size: 27px;
   line-height: 1.1;
   text-transform: uppercase;
+
+  @media (min-width: 400px) {
+    font-size: 36px;
+  }
 
   @include media-breakpoint-up('sm') {
     font-size: 53px;

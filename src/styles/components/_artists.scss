@@ -35,7 +35,7 @@
   }
 
   &.is-active {
-    color: red;
+    color: $bright-red;
 
     &:after {
       opacity: 1;

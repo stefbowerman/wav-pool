@@ -14,6 +14,14 @@
   @include wav-list;
   text-align: center;
 
+  li {
+    cursor: pointer;
+
+    &.is-active {
+      color: $bright-red;
+    }
+  }
+
   @include media-breakpoint-up('md') {
 
     text-align: left;
@@ -35,9 +43,8 @@
   left: 0;
   right: 0;
   z-index: -1;
-  background-color: #63dffb;
+  background-color: $sick-blue;
   transform: translateY(-50%);
-  transition: background-color 1000ms ease;
 }
 
 @keyframes banner-animation {
@@ -71,6 +78,12 @@
     background-image: url('../images/client-logos/red-bull.jpg');
     background-size: auto 120%;
   }
+  &--dc-shoe-co {
+    background-image: url('../images/client-logos/dc-shoe-co.jpg');
+  }
+  &--monster {
+    background-image: url('../images/client-logos/monster.jpg');
+  }  
 
   @include media-breakpoint-up('md') {
     animation-duration: 10s;

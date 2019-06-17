@@ -1,4 +1,5 @@
 import BaseComponent from './base';
+import * as Breakpoints from '../core/breakpoints';
 
 const classes = {
   listItemActive: 'is-active'
@@ -18,7 +19,10 @@ export default class ClientsComponent extends BaseComponent {
       el.addEventListener('mouseleave', this.onLIMouseleave.bind(this));
     });
 
-    this.activateItem(this.listItems[0]); // activate the first one
+    // On mobile we have a scroll effect that ativates the items
+    if(window.innerWidth >= Breakpoints.getBreakpointMinWidth('md')) {
+      this.activateItem(this.listItems[0]); // activate the first one
+    }
   }
 
   onLIMouseenter(e) {

@@ -5,11 +5,13 @@ import ScrollMonitor from 'scrollmonitor';
 import TagComponent from './components/tag';
 import ArtistsComponent from './components/artists';
 import ClientsComponent from './components/clients';
+import GlobeComponent from './components/globe';
 
 const componentMap = {
   tag: TagComponent,
   artists: ArtistsComponent,
-  clients: ClientsComponent
+  clients: ClientsComponent,
+  globe: GlobeComponent
 };
 
 for (const prop in componentMap) {

@@ -17,6 +17,18 @@ class TagLineComponent {
     this.images = gallery.querySelectorAll('img');
     this.imageCount = this.images.length;
     this.interval = null;
+
+    // Lazy load any images
+    this.loadMedia();
+  }
+
+  loadMedia() {
+    this.images.forEach((img, i) => {
+      if(img.hasAttribute('data-src')) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.removeAttribute('data-src');
+      }
+    });
   }
 
   typeOut() {

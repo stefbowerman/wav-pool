@@ -20,6 +20,12 @@
   }
 }
 
+.hide-on-tablet {
+  @include media-breakpoint-only('sm') {
+    display: none;
+  }
+}
+
 .hide-on-desktop {
   @include media-breakpoint-up('md') {
     display: none;

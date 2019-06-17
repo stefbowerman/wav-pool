@@ -59,7 +59,7 @@
   right: 0;
   bottom: 0;
   background: {
-    size: auto 116%;
+    size: auto 120%;
     repeat: repeat-x;
     position: 0% center;
     color: $body-bg;
@@ -70,20 +70,32 @@
 
   &--nike {
     background-image: url('../images/client-logos/nike.jpg');
+    background-size: auto 116%;
   }
-  &--adidas {
-    background-image: url('../images/client-logos/adidas.jpg');
+  &--adidas { background-image: url('../images/client-logos/adidas.jpg'); }
+  &--red-bull { background-image: url('../images/client-logos/red-bull.jpg'); }
+  &--dc-shoe-co { background-image: url('../images/client-logos/dc-shoe-co.jpg'); }
+  &--monster { background-image: url('../images/client-logos/monster.jpg'); }
+  &--obey {
+    background-image: url('../images/client-logos/obey.jpg');
+    background-size: auto 130%;
   }
-  &--red-bull {
-    background-image: url('../images/client-logos/red-bull.jpg');
-    background-size: auto 120%;
-  }
-  &--dc-shoe-co {
-    background-image: url('../images/client-logos/dc-shoe-co.jpg');
-  }
-  &--monster {
-    background-image: url('../images/client-logos/monster.jpg');
-  }  
+  &--vans { background-image: url('../images/client-logos/vans.jpg'); }
+  &--undefeated { background-image: url('../images/client-logos/undefeated.jpg'); }
+  &--stance { background-image: url('../images/client-logos/stance.jpg'); }
+  &--mountain-dew { background-image: url('../images/client-logos/mountain-dew.jpg'); }
+  &--lagunitas-brewing { background-image: url('../images/client-logos/lagunitas-brewing.jpg'); }
+  &--oakley { background-image: url('../images/client-logos/oakley.jpg'); }
+  &--element { background-image: url('../images/client-logos/element.jpg'); }
+  &--huf { background-image: url('../images/client-logos/huf.jpg'); }
+
+  &--hbo { background-image: url('../images/client-logos/hbo.jpg'); }
+  &--cinemax { background-image: url('../images/client-logos/cinemax.jpg'); }
+  &--marmot { background-image: url('../images/client-logos/marmot.jpg'); }
+  &--fox-racing { background-image: url('../images/client-logos/fox-racing.jpg'); }
+  &--fitbit { background-image: url('../images/client-logos/fitbit.jpg'); }
+  &--fueltv { background-image: url('../images/client-logos/fueltv.jpg'); }
+  &--monster-children { background-image: url('../images/client-logos/monster-children.jpg'); }
 
   @include media-breakpoint-up('md') {
     animation-duration: 10s;

@@ -1,6 +1,5 @@
 @keyframes globe-rotate {
   0% { transform: rotate3d(1, 1, 1, 0deg); }
-  50% { transform: rotate3d(1, 1, 1, 180deg); }
   100% { transform: rotate3d(1, 1, 1, 360deg); }
 }
 
@@ -15,14 +14,14 @@
   }
 
   @include media-breakpoint-up('lg') {
-    width: 38vw;
-    max-width: 750px;
+    width: 48vw;
+    max-width: 640px;
   }
 }
 
-.globe {
+.globe-fallback {
   background: {
-    image: url('../images/globe.png');
+    image: url('../images/globe.jpg');
     size: cover;
   }
   height: 0;
@@ -31,6 +30,20 @@
   margin: 0 auto;
   position: relative;
   animation: globe-rotate 15s linear infinite;
+}
+
+.globe-video {
+  width: 100%;
+  margin: 0 auto;
+
+  .js & {
+    transform: scale(0.5);
+  }
+
+  .js .globe-area.is-visible & {
+    transform: scale(1);
+    transition: transform 5s cubic-bezier(0.32, -0.01, 0, 1.28);
+  }
 }
 
 .globe-area {

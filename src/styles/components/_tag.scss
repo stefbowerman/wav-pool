@@ -32,10 +32,7 @@
 
   @include media-breakpoint-up('xl') {
     font-size: 91px;
-  }
-
-  @media (min-width: 1800px) {
-    max-width: 1400px;
+    max-width: 1200px;
   }
 }
 

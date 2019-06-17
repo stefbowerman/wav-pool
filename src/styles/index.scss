@@ -32,8 +32,16 @@ section {
 .section-header {
   max-width: 1800px;
   margin: 0 auto;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
   transform: translateX(-15px);
+
+  @include media-breakpoint-up('md') {
+    margin-bottom: 150px;
+  }
+
+  &--pull {
+    transform: translateX(-10px);
+  }
 }
 
 section.fs {

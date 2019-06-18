@@ -17,17 +17,26 @@ footer {
       margin: 0 8px;
     }
   }
+}
+
+.footer-banner {
+  padding: 10px 0;
+  background-color: $black;
+  margin-top: $grid-gutter-width * 1.5;
+
+  @include media-breakpoint-up('md') {
+    margin-top: $grid-gutter-width * 2;
+    padding: 15px 0;
+  }
 
   &:after {
     content: '';
     display: block;
-    height: 75px;
-    height: calc(50px + 5vw);
+    height: 50px;
+    height: calc(30px + 5vw);
     width: 200%;
-    margin-top: $grid-gutter-width * 1.5;
     background: {
-      color: $black;
-      size: auto 100%;
+      size: percentage(1/12) auto; // show the logo on the screen 6 times (12 times total since the width is 200%)
       repeat: repeat-x;
       position: 0% center;
       image: url('../images/logo-small-inverted.jpg');
@@ -35,12 +44,16 @@ footer {
     animation: footer-banner-animation 15s linear infinite;
 
     @include media-breakpoint-up('md') {
-      margin-top: $grid-gutter-width * 2;
       animation-duration: 30s;
+      height: 140px;
+      height: calc(50px + 7vw);
     }
 
-    @include media-breakpoint-up('xxl') {
-      height: 130px;
+    @include media-breakpoint-up('xl') {
+      background-size: percentage(1/16) auto;
+      background-size: calc(6.25vw) auto;
+      height: 100px;
+      height: calc(30px + 2vw);
     }
   }
 }

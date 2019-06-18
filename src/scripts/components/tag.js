@@ -9,7 +9,7 @@ class TagLineComponent {
     this.fullText = this.line.textContent;
     this.typedText = '';
     this.typeTimeout = null;
-    this.characterTimeoutDuration = this.fullText.length > 7 ? 60 : 120;
+    this.characterTimeoutDuration = this.fullText.length > 7 ? 60 : 90;
     this.onTypingComplete = (isFunction(onTypingComplete) ? onTypingComplete : () => {});
     this.onDeleteTextComplete = (isFunction(onDeleteTextComplete) ? onDeleteTextComplete : () => {});
 
@@ -132,7 +132,7 @@ export default class TagComponent extends BaseComponent {
 
   onTypingComplete(tagLine) {
     // Make sure that the timeout clock starts *after* the typing animation is complete
-    setTimeout(tagLine.deleteText.bind(tagLine), 2000);
+    setTimeout(tagLine.deleteText.bind(tagLine), 1500);
   }
 
   onDeleteTextComplete(tagLine) {

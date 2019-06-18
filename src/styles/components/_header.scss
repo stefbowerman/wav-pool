@@ -7,11 +7,12 @@ header {
   padding: $grid-gutter-width/2 0;
 
   nav {
-    text-align: right;
-    display: none;
+    margin-top: 10px;
+    text-align: center;
 
     @include media-breakpoint-up('sm') {
-      display: block;
+      margin-top: 0;
+      text-align: right;
     }
 
     ul {
@@ -40,11 +41,13 @@ header {
 
 .header-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
 
   @include media-breakpoint-up('sm') {
     justify-content: space-between;
+    flex-direction: row;
     text-align: left;
   }  
 }

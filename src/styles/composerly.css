@@ -2,6 +2,10 @@
   display: none;
 }
 
+body {
+  color: #000;
+}
+
 body * {
   font-family: Helvetica, "Helvetica Neue", sans-serif;
 }
@@ -57,10 +61,6 @@ hr {
 
 .navbar-search {
   margin-bottom: 30px;
-  position: absolute !important;
-  top: 0;
-  right: 0 !important;
-  left: auto !important;
 }
 
 .navbar-search input {
@@ -70,6 +70,19 @@ hr {
   font-size: 12px;
   text-transform: uppercase;
   border-radius: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navbar-search {
+    position: absolute !important;
+    top: 0;
+    right: 0 !important;
+    left: auto !important;    
+  }
+  .navbar-search input {
+    width: auto;
+  }
 }
 
 .small-label,
@@ -79,6 +92,8 @@ hr {
 
 .small-label {
   font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .suggested-wrapper .suggested-sorting {
@@ -122,6 +137,7 @@ hr {
   color: inherit;
   padding: 2px 7px;
   margin-right: 0.6em;
+  margin-bottom: 0.6em;
 }
 
 .suggested-wrapper .suggested .querytag .count,
@@ -145,9 +161,7 @@ hr {
 }
 
 .playlist-query-results .playlist-wrapper-item .playlist-bottom p.description {
-  font-size: 12px;
-  margin-top: 7px;
-  font-size: 12px;
+  display: none;
 }
 
 /* Playlist display */
@@ -157,6 +171,8 @@ hr {
 
 .playlist-header-wrapper .header .info-wrapper .wrapper-right .title {
   font-family: inherit;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .tracks-container {
@@ -165,6 +181,22 @@ hr {
 
 .tracks-container .small-label {
   display: none;
+}
+
+.tracks-container.compact .track.playing .title,
+.tracks-container.compact .track.paused .title {
+  margin-bottom: 0.55em;
+}
+
+.tracks-container.compact .track.playing .title *,
+.tracks-container.compact .track.paused .title * {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tracks-container.compact .track-wrapper {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Track playlist */
@@ -185,8 +217,12 @@ hr {
   color: #000 !important;
 }
 
+.track.paused .title {
+  color: #000 !important;
+}
+
 .track .transport li.timings,
-.track .transport li.timings.current {
+.track .transport li.timings .current {
   font-family: inherit;
 }
 
@@ -196,4 +232,35 @@ hr {
 
 .footer-inner {
   display: none !important;
+}
+
+/* Buttons */
+.btn {
+  border-width: 2px !important;
+}
+.btn .fa {
+  display: none;
+}
+.btn-lg {
+  font-size: 2rem !important;
+  border-radius: 0 !important;
+}
+
+/* Player */
+#np-wrapper {
+  width: auto;
+  left: 15px;
+  right: 15px;
+  background-color: white;
+  color: black;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: 1px solid black;
+  border-bottom-width: 0;
+}
+
+#np-wrapper .title {
+  font-weight: 500;
+  text-transform: uppercase;
 }

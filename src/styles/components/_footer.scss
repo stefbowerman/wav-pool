@@ -6,15 +6,30 @@
 footer {
   padding: $grid-gutter-width*2 0 0;
   overflow: hidden;
+  @include p2;
 
   ul {
     list-style: none;
     padding-left: 0;
-    @include p2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto 30px;
+
+    @include media-breakpoint-up('sm') {
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
 
     li {
-      display: inline-block;
-      margin: 0 8px;
+      & + li {
+        margin-top: 7px;
+
+        @include media-breakpoint-up('sm') {
+          margin-top: 0;
+        }
+      }
     }
   }
 }

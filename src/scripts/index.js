@@ -21,12 +21,3 @@ for (const prop in componentMap) {
     new componentMap[prop](el);
   }
 }
-
-// document.querySelectorAll('section').forEach((el, i) => {
-//   const watcher = ScrollMonitor.create(el, -300);
-
-//   watcher.enterViewport(() => {
-//     el.classList.add('is-visible');
-//     watcher.destroy();
-//   });
-// });

@@ -17,6 +17,15 @@
     width: 48vw;
     max-width: 640px;
   }
+
+  .js & {
+    transform: scale(0.65);
+  }
+
+  .js .globe-area.is-visible & {
+    transform: scale(1);
+    transition: transform 4s cubic-bezier(0.57, 0.13, 0.31, 1.22);
+  }  
 }
 
 .globe-fallback {
@@ -29,21 +38,12 @@
   padding-bottom: 102.4%;
   margin: 0 auto;
   position: relative;
-  animation: globe-rotate 15s linear infinite;
+  animation: globe-rotate 10s linear infinite;
 }
 
 .globe-video {
   width: 100%;
   margin: 0 auto;
-
-  .js & {
-    transform: scale(0.65);
-  }
-
-  .js .globe-area.is-visible & {
-    transform: scale(1);
-    transition: transform 4s cubic-bezier(0.57, 0.13, 0.31, 1.22);
-  }
 }
 
 .globe-area {

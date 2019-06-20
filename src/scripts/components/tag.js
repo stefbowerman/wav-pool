@@ -71,12 +71,12 @@ class TagLineComponent {
 
   startGalleryRotation() {
     this.interval = setInterval(() => {
+      let newIndex = this.currentIndex === (this.imageCount - 1) ? 0 : this.currentIndex + 1;
+
       this.images.forEach((img) => {
         img.classList.remove('is-active');
       });
-      
-      let newIndex = this.currentIndex === (this.imageCount - 1) ? 0 : this.currentIndex + 1;
-      
+            
       this.images[newIndex].classList.add('is-active');
               
       this.currentIndex = newIndex;

@@ -1,3 +1,57 @@
+/* Update highlight blue color to our blue, do this at the top so we can override below */
+.spinner2 > div,
+.toast-info,
+.track.new .title:after,
+.composer-wrapper .composer-info li:hover,
+.settings-page-button.active,
+.new-setting,
+.edit-trackdata-table button.save-trackdata,
+.tablesorter-headerDesc,
+.tablesorter-headerAsc,
+li.statistics-query.active {
+  background-color: #113CFA !important;
+}
+
+.track .title:hover,
+.track .favorite.selected,
+.track .transport li a:hover,
+.track .transport li:hover a,
+.track p .genre:hover,.track .tags .tagselect:hover,
+.track.playing .title,.track.paused .title,
+.track .playlist-list .playlist-items .playlist-wrapper-item:hover,
+.switch-tracks-view-button:hover,
+.link,
+.suggested-wrapper .suggested-sorting .sorting-radio i.checked,
+.suggested-wrapper .suggested-sorting .sorting-radio.inactive:hover,
+.menu-toggle-button:hover,
+body.noheader .menu-toggle-button:hover,
+.side-container .close-button:hover,
+.side-container li:hover,
+.playlist-header-wrapper .header .info-wrapper .wrapper-right .title:hover .playlist-play-button,
+.header-wrapper.subpage .composer-wrapper .composer-name .composer-name-text:hover,
+.composer-wrapper .composer-name .composer-name-text:hover,
+#users-table .permissions-wrapper .permissions-button.permissions-button-downloads i,
+.settings-page-button.active .new-setting,
+#global-dialog .edit-track-play-button i:hover,
+#np-wrapper .title:hover,
+#np-wrapper .link:hover,
+#loading .check,
+#user-toolbar .navbar-brand:hover,
+.edit-trackdata-table .edit-trackdata:hover,
+.edit-trackdata-table .tm-edit,
+.edit-trackdata-table tr.track .title span:hover,
+#np-wrapper .np-controls-wrapper .np-controls:hover {
+  color: #113CFA;
+}
+
+.track .avatar:hover,
+.track p .genre:hover,.track .tags .tagselect:hover,
+.playlist-query-results .playlist-wrapper-item:hover,
+.cover-wrapper .thumbnails ul li.active {
+  border-color: #113CFA;
+}
+/* End blue update */
+
 .track .transport .permalink, .track .transport .favorite, .side-container #signin-button, .side-container li[rel="favorites"] {
   display: none;
 }
@@ -19,6 +73,14 @@ hr {
   margin-bottom: 30px;
 }
 
+.music-wrapper > .container-fluid {
+  padding: 0;
+}
+
+.music-wrapper > .container-fluid > .col-sm-12 {
+  padding: 0;
+}
+
 .footer-inner {
   display: flex;
   justify-content: center;
@@ -28,14 +90,89 @@ hr {
   display: none;
 }
 
-.side-container,
 .menu-toggle-button {
+  display: none;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-toggle-button {
+    display: block;
+  }
+}
+
+.side-container li,
+.footer-wrapper {
+  color: #000 !important;
+}
+
+.side-container-wrapper {
+  width: 180px;
+  position: fixed;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .side-container-wrapper {
+    border-right: 1px solid #000;
+    background-color: #FFF;
+    padding: 30px 15px 30px 0;
+  }
+}
+
+.side-container .close-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.side-container .close-button:before {
+  content: '\00d7';
+  font-size: 25px;
+}
+
+.side-container .close-button .fa {
+  display: none;
+}
+
+.side-container .container-item {
+  padding: 0;
+}
+
+.side-container .genres {
+  display: none;
+}
+
+.side-container li {
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  border-left: none !important;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .side-container li {
+    font-size: 0.8em;
+  }
+}
+
+.side-container li .count {
   display: none;
 }
 
 .main-container {
-  left: 0;
   right: 0;
+  left: 0;
+  top: 15px;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    left: 180px;
+    top: 0;
+  }
 }
 
 .search-wrapper .querytag {
@@ -130,7 +267,8 @@ hr {
 .suggested-wrapper .suggested-alpha .durationtag,
 .track p .genre,
 .track .tags .tagselect,
-.track .playlist-list .playlist-items .playlist-wrapper-item {
+.track .playlist-list .playlist-items .playlist-wrapper-item,
+.search-wrapper .query-tag-wrapper .querytag {
   border: 1px solid black !important;
   border-radius: 0;
   text-transform: uppercase;
@@ -138,6 +276,10 @@ hr {
   padding: 2px 7px;
   margin-right: 0.6em;
   margin-bottom: 0.6em;
+}
+
+.playlist-list .playlist-wrapper-item:hover, .suggested-wrapper .refine-by.active:hover {
+  color: inherit !important;
 }
 
 .suggested-wrapper .suggested .querytag .count,
@@ -258,6 +400,12 @@ hr {
   -moz-box-shadow: none;
   border: 1px solid black;
   border-bottom-width: 0;
+}
+
+@media (min-width: 768px) {
+  #np-wrapper {
+    left: 180px; /* Sidebar width */
+  }
 }
 
 #np-wrapper .title {

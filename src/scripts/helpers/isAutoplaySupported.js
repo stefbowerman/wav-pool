@@ -37,7 +37,7 @@ export default (callback) => {
     const promise = video.play();
 
     if(promise !== undefined) {
-      promise.catch(() => { video.play(); })
+      promise.catch(() => { video.play(); });
     }
 
   } else {

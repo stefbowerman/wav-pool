@@ -386,12 +386,14 @@ hr {
 /* Buttons */
 .btn {
   border-width: 2px !important;
-  border-radius: 0;
-  text-transform: uppercase;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
 }
+
 .btn:not(.btn-social) .fa {
   display: none;
 }
+
 .btn-lg {
   font-size: 2rem !important;
   border-radius: 0 !important;

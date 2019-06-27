@@ -250,6 +250,12 @@ hr {
   border-bottom: 1px solid #DDD;
   text-transform: uppercase;
   font-weight: normal;
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
 }
 
 .suggested-wrapper .refine-by.active {

@@ -52,10 +52,6 @@ body.noheader .menu-toggle-button:hover,
 }
 /* End blue update */
 
-.track .transport .permalink, .track .transport .favorite, .side-container #signin-button, .side-container li[rel="favorites"] {
-  display: none;
-}
-
 body {
   color: #000;
 }
@@ -86,7 +82,7 @@ hr {
   justify-content: center;
 }
 
-.track .transport .permalink, .track .transport .favorite, .side-container #signin-button, .side-container li[rel="favorites"] {
+.track .transport .permalink, .track .transport .favorite, .side-container #signin-button {
   display: none;
 }
 
@@ -101,6 +97,7 @@ hr {
 @media screen and (max-width: 767px) {
   .menu-toggle-button {
     display: block;
+    color: #000 !important;
   }
 }
 

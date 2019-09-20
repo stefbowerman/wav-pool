@@ -82,7 +82,7 @@ hr {
   justify-content: center;
 }
 
-.track .transport .permalink, .track .transport .favorite, .side-container #signin-button {
+.track .transport .permalink, .side-container #signin-button {
   display: none;
 }
 

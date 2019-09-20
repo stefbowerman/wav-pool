@@ -52,4 +52,12 @@ section.fs {
   @extend .container;
   max-width: 45em;
   margin: 0 auto;
+
+  p {
+    margin-bottom: $paragraph-margin-bottom/2;
+  }
+
+  p + h6 {
+    margin-top: $spacer*3;
+  }
 }

@@ -21,11 +21,10 @@ export default class ArtistsComponent extends BaseComponent {
 
     this.links.forEach((el, i) => {
       el.addEventListener('mouseenter', this.onLinkMouseenter.bind(this));
-      // el.addEventListener('mouseleave', this.onLinkMouseleave.bind(this));
+      el.addEventListener('click', e => e.preventDefault());
 
       this.linkScrollMonitors.push(ScrollMonitor.create(el));
     });
-
 
     const scrollHandler = this.onScroll.bind(this);
 
@@ -52,10 +51,6 @@ export default class ArtistsComponent extends BaseComponent {
     });
 
     this.activateItem(e.currentTarget);
-  }
-
-  onLinkMouseleave(e) {
-    this.deactivateItem(e.currentTarget);
   }
 
   activateItem(el) {

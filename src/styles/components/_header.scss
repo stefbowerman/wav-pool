@@ -6,11 +6,15 @@ header {
   right: 0;
   padding: $grid-gutter-width/2 0;
 
+  a:hover {
+    color: $bright-green;
+  }  
+
   nav {
     margin-top: 10px;
     text-align: center;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up('md') {
       margin-top: 0;
       text-align: right;
     }
@@ -45,7 +49,7 @@ header {
   justify-content: center;
   text-align: center;
 
-  @include media-breakpoint-up('sm') {
+  @include media-breakpoint-up('md') {
     justify-content: space-between;
     flex-direction: row;
     text-align: left;

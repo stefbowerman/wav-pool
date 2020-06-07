@@ -28,7 +28,7 @@
   }
 
   &.is-active {
-    color: $bright-red;
+    color: $bright-pink;
 
     &:after {
       opacity: 1;
@@ -122,5 +122,16 @@
 
   &--jel {
     background-image: url('../images/artists/jel.jpg')
+  }
+
+  &--great-dane {
+    background-image: url('../images/artists/great-dane.jpg')
+  }
+
+  &--afta-1 {
+    background-image: url('../images/artists/afta-1.jpg')
+  }
+  &--salami-rose {
+    background-image: url('../images/artists/salami-rose.jpg')
   }
 }

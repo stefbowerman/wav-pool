@@ -8,18 +8,21 @@ footer {
   overflow: hidden;
   @include p2;
 
+  a:hover {
+    color: $bright-green;
+  }
+
   ul {
     list-style: none;
     padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto 30px;
 
     @include media-breakpoint-up('sm') {
       flex-direction: row;
-      margin-bottom: 10px;
     }
 
     li {

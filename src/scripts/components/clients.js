@@ -13,24 +13,20 @@ export default class ClientsComponent extends BaseComponent {
     this.bannerWrap = this.container.querySelector('.client-banner-wrap');
     this.banner = this.container.querySelector('.client-banner');
     this.activeItem = null;
+    this.isTouch = 'ontouchstart' in window;
 
+    const interactionEvent = this.isTouch ? 'touchstart' : 'mouseenter';
     this.listItems.forEach((el, i) => {
-      el.addEventListener('mouseenter', this.onLIMouseenter.bind(this));
-      el.addEventListener('mouseleave', this.onLIMouseleave.bind(this));
+      el.addEventListener(interactionEvent, this.onLIInteractionStart.bind(this));
     });
 
-    // On mobile we have a scroll effect that ativates the items
-    if(window.innerWidth >= Breakpoints.getBreakpointMinWidth('md')) {
+    // if(window.innerWidth >= Breakpoints.getBreakpointMinWidth('md')) {
       this.activateItem(this.listItems[0]); // activate the first one
-    }
+    // }
   }
 
-  onLIMouseenter(e) {
+  onLIInteractionStart(e) {
     this.activateItem(e.currentTarget);
-  }
-
-  onLIMouseleave(e) {
-    this.deactivateItem(e.currentTarget);
   }
 
   getItemSlug(el) {

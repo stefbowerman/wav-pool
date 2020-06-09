@@ -6,9 +6,14 @@ header {
   right: 0;
   padding: $grid-gutter-width/2 0;
 
-  a:hover {
-    color: $bright-green;
-  }  
+  a {
+    transition: $link-transition-out;
+    
+    &:hover {
+      color: $bright-green;
+      transition: $link-transition-in;
+    }
+  }
 
   nav {
     margin-top: 10px;

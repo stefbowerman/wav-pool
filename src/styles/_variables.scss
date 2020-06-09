@@ -41,6 +41,8 @@ $link-color:                              #000 !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        lighten($link-color, 15%) !default;
 $link-hover-decoration:                   none !default;
+$link-transition-in:                      color 50ms ease-in-out;
+$link-transition-out:                     color 200ms ease-out;
 
 // Paragraphs
 //

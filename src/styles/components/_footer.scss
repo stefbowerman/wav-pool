@@ -8,8 +8,13 @@ footer {
   overflow: hidden;
   @include p2;
 
-  a:hover {
-    color: $bright-green;
+  a {
+    transition: $link-transition-out;
+    
+    &:hover {
+      color: $bright-green;
+      transition: $link-transition-in;
+    }
   }
 
   ul {

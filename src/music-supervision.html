@@ -11,6 +11,38 @@
   </script>
 </head>
 <body>
+  <style>
+    .p0 {
+      font-size: 1.4rem;
+    }
+
+    .container {
+      max-width: 1130px;
+    }
+
+    #arrow-1 {
+      position: absolute;
+      height: 3px;
+      width: 405px;
+      background: white;
+      transform: translate(-105%, 10px) rotate(-45deg);
+      left: 0;
+      bottom: 0;
+      transform-origin: right;
+    }
+
+    #arrow-1:after {
+      content: '';
+      height: 15px;
+      width: 15px;
+      border: 3px solid white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: rotate(45deg) translate(4px, 5px);
+      border-width: 0 0 3px 3px;
+    }
+  </style>
   <header>
     <div class="container-fluid">
       <div class="header-content p2">
@@ -27,12 +59,58 @@
     </div>
   </header>
   <main>
-    <div class="page-header">
-      <h1 class="outline-title">Music Supervision</h1>
+    <h1 hidden>Music Supervision</h1>
+    <div class="container" style="margin-top: 27vh;">
+      <div class="text-uppercase p1 p0">We offer</div>
+      <div style="font-size: 120px; line-height: 0.85; display: flex; flex-direction: column; text-transform: uppercase; margin: 30px 0 220px; letter-spacing: -0.01em;">
+        <div>Creative</div>
+        <div>Music</div>
+        <div style="align-self: flex-end;">Supervision</div>
+      </div>
+      <div class="p1 p0" style="text-transform: none; margin-bottom: 90px; transform: translateX(-200px)">And <span class="text-uppercase">licensing services</span> from our global network of</div>
+      <div style="font-size: 120px; line-height: 1.15; text-transform: uppercase; letter-spacing: -0.01em">
+        <div>Labels</div>
+        <div style="display: flex;align-items: baseline;">
+          Publishers
+          <span style="font-size: 20px; letter-spacing: 0; display: inline-block;margin-left: 50px;">and</span>
+        </div>
+        <div>Artists</div>
+      </div>
     </div>
-    <section>
-      <div class="container">We offer creative music supervision and licensing services from our global network of labels, publishers, and artists.</div>
-      <div class="container">.Wav Pool's team of music curators have formed a deeper understanding of musical aesthetic through decades of experience as active members of the music community and creative industries such as art and film.</div>
+    <section style="background-color: #40FA19; padding: 360px 0; margin-top: 360px; text-transform: uppercase;">
+      <div class="container">
+        <div style="font-size: 55px; line-height: 114%; text-transform: uppercase; max-width: 18em; margin: 0 auto;">
+          our team &nbsp;&nbsp;of music curators have formed
+          <span style="display: inline-block; margin-left: 49px;">a</span>
+        </div>
+        <div style="text-align: center; font-size: 100px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em; margin: 85px 0 95px;">Deeper<br/>Understanding</div>
+        <div style="display: flex; justify-content: space-between; font-size: 55px; line-height: 114%; text-transform: uppercase; margin: 0 auto; max-width: 1100px">
+          <div>of musical aesthetic</div>
+          <div style="position:relative">
+            through
+            <span id="arrow-1"></span>
+          </div>
+        </div>
+        <div style="margin: 100px auto; max-width: 1100px; font-size: 120px; line-height: 1; text-transform: uppercase; letter-spacing: -0.01em;">
+          decades<br/>of<br/>experience
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 28px; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 50px;">
+          <span>as</span>
+          <span>active</span>
+          <span>members</span>
+          <span>of</span>
+          <span>the</span>
+        </div>
+        <div>
+          <div style="font-size: 100px; letter-spacing: -0.01em;">
+            Music &nbsp;&nbsp;Community
+          </div>
+          <div style="font-size: 28px; letter-spacing: 0; margin: 10px 0;">And<br>creative industries such as</div>
+          <div style="font-size: 100px; letter-spacing: -0.01em; text-align: right;">
+            art and film
+          </div>
+        </div>
+      </div>
     </section>
     <section id="closing" class="text-center" style="margin-top: 100px;">
       <div class="container-fluid">

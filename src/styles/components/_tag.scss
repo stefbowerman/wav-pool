@@ -38,8 +38,22 @@
 
 .tag-row {
   @include media-breakpoint-up('md') {
-    display: flex;  
+    display: flex;
   }
+
+  &.tag-row--v {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .plus {
+    display: inline-block;
+    font-size: 70%;
+    margin: 0 13px;
+    -webkit-text-stroke-width: 1px;
+            text-stroke-width: 1px;
+  }  
 }
 
 .tag-swap {

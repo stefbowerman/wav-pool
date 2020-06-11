@@ -37,9 +37,9 @@ export default class ArtistsComponent extends BaseComponent {
     });
 
     // On mobile we have a scroll effect that ativates the items
-    // if(this.isDesktop) {
+    if(this.isDesktop) {
       this.activateItem(this.links[0]); // activate the first one
-    // }
+    }
 
   }
 

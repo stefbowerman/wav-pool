@@ -9,12 +9,7 @@ footer {
   @include p2;
 
   a {
-    transition: $link-transition-out;
-    
-    &:hover {
-      color: $bright-green;
-      transition: $link-transition-in;
-    }
+    @include pill-link;
   }
 
   ul {

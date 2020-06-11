@@ -7,12 +7,7 @@ header {
   padding: $grid-gutter-width/2 0;
 
   a {
-    transition: $link-transition-out;
-    
-    &:hover {
-      color: $bright-green;
-      transition: $link-transition-in;
-    }
+    @include pill-link;
   }
 
   nav {
@@ -31,7 +26,7 @@ header {
 
       li {
         display: inline-block;
-        margin: 0 3px;
+        margin: 0 6px;
         padding: 0 3px;
 
         &:first-child {

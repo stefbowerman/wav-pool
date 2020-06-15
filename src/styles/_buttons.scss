@@ -52,8 +52,6 @@
   &:hover {
     color: $body-color;
     text-decoration: none;
-    // transform: translateX(-10px);
-    // box-shadow: -6px 8px 0 0px $bright-red, -8px 10px 0px 0px $black, -4px 10px 0px 0px $black, -8px 6px 0px 0px $black;
     box-shadow: -5px 6px 0 0px $white, -7px 8px 0px 0px $black, -3px 8px 0px 0px $black, -7px 4px 0px 0px $black;
 
     &:after {

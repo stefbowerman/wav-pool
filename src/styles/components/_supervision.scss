@@ -3,14 +3,20 @@ body.music-supervision {
     max-width: 1130px;
   }
 
-  #closing,
+  .closing,
   footer {
     background-color: $acid-green;
   }
 
-  #closing a.outline-subtitle:hover {
-    -webkit-text-stroke-color: $white;
-            text-stroke-color: $white;
+  .closing {
+    .outline-subtitle:hover {
+      -webkit-text-stroke-color: $white;
+              text-stroke-color: $white;
+    }
+
+    .btn {
+      background-color: $white;
+    }
   }
 }
 
@@ -145,7 +151,7 @@ section.sprvsn-highlight {
 
   @include media-breakpoint-up('lg') {
     margin-top: 160px;
-    padding: 260px 0;
+    padding: 260px 0 140px;
   }
 }
 

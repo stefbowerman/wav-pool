@@ -16,19 +16,19 @@
 
 .hide-on-mobile {
   @include media-breakpoint-down('sm') {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-on-tablet {
-  @include media-breakpoint-only('sm') {
-    display: none;
+  @include media-breakpoint-between('sm', 'md') {
+    display: none !important;
   }
 }
 
 .hide-on-desktop {
-  @include media-breakpoint-up('md') {
-    display: none;
+  @include media-breakpoint-up('lg') {
+    display: none !important;
   }
 }
 

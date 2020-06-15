@@ -25,7 +25,6 @@
   @include media-breakpoint-up('lg') {
     top: -5vh;
     font-size: 72px;
-    line-height: 105px;
     max-width: 85vw;
     margin: 0 auto;
   }
@@ -33,6 +32,7 @@
   @include media-breakpoint-up('xl') {
     font-size: 91px;
     max-width: 1200px;
+    line-height: 105px;
   }
 }
 

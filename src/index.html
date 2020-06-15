@@ -17,7 +17,7 @@
         <a href="/">.Wav Pool is a music licensing agency</a>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li class="hide-on-mobile"><a href="/">Home</a></li>
             <li><a href="/catalog">Catalog</a></li>
             <li><a href="/music-supervision">Music Supervision</a></li>
             <li><a href="mailto:info@wav-pool.com" target="_blank">Contact</a></li>
@@ -32,13 +32,11 @@
         <div class="container-fluid">
           <div class="tag">
             <div class="tag-rows">
-              <div class="tag-row">
-                Music
+              <div class="tag-row tag-row--v">
+                Music <span class="hide-on-desktop" style="display: inline-block; padding-left: 0.3em;">licensing</span><span class="plus hide-on-desktop">+</span>
               </div>
               <div class="tag-row tag-row--v">
-                licensing
-                <span class="plus">+</span>
-                supervision
+                <span class="hide-on-mobile hide-on-tablet">licensing</span><span class="plus hide-on-mobile hide-on-tablet">+</span>supervision
               </div>
               <div class="tag-row">
                 for
@@ -275,17 +273,17 @@
         </div>
       </div>
     </section>    
-    <section id="closing" class="text-center">
+    <section id="closing" class="closing">
       <div class="container-fluid">
-        <div style="text-transform: uppercase; margin-bottom: 30px;">We're here to help</div>
+        <div class="pretext">We're here to help</div>
         <div class="hide-on-mobile">
-          <a href="mailto:info@wav-pool.com" class="outline-subtitle" style="display: block;" target="_blank">info@wav-pool.com</a>
-          <div style="margin-top: 30px">
+          <a href="mailto:info@wav-pool.com" class="outline-subtitle" target="_blank">info@wav-pool.com</a>
+          <div class="posttext">
             <a href="/faq" class="btn">See Our FAQs</a>
           </div>
         </div>
         <div class="hide-on-desktop">
-          <div style="max-width: 340px; margin: 0 auto;">
+          <div class="closing-buttons">
             <a href="mailto:info@wav-pool.com" class="btn btn--block" target="_blank">info@wav-pool.com</a>
             <a href="/faq" class="btn btn--block">See Our FAQs</a>
           </div>

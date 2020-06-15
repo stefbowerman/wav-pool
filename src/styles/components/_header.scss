@@ -29,14 +29,16 @@ header {
         margin: 0 6px;
         padding: 0 3px;
 
-        &:first-child {
-          margin-left: 0;
-          padding-left: 0;
-        }
+        @include media-breakpoint-up('md') {
+          &:first-child {
+            margin-left: 0;
+            padding-left: 0;
+          }
 
-        &:last-child {
-          margin-right: 0;
-          padding-right: 0;
+          &:last-child {
+            margin-right: 0;
+            padding-right: 0;
+          }
         }
       }
     }

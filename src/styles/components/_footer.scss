@@ -63,11 +63,6 @@ footer {
 
     @include media-breakpoint-up('md') {
       animation-duration: 30s;
-      height: 140px;
-      height: calc(50px + 7vw);
-    }
-
-    @include media-breakpoint-up('xl') {
       background-size: percentage(1/16) auto;
       background-size: calc(6.25vw) auto;
       height: 100px;

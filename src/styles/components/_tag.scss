@@ -1,4 +1,5 @@
 .tag-wrapper {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -94,20 +95,23 @@
 
 .tag-line-gallery-container {
   position: absolute;
-  top: 0;
-  bottom: -39vh;
   z-index: -1;
   opacity: 0.85;
+  top: 20vh;
+  bottom: 20vh;
   right: 5%;
   left: 20%;
 
   @include media-breakpoint-up('sm') {
+    top: 25%;
+    bottom: 25%;
     right: 10%;
     left: 30%;
   }
 
   @include media-breakpoint-up('lg') {
-    top: -15vh;
+    top: 18%;
+    bottom: 18%;
     left: 45%;
   }
 }

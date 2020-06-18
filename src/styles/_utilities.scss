@@ -21,7 +21,7 @@
 }
 
 .hide-on-tablet {
-  @include media-breakpoint-between('sm', 'md') {
+  @include media-breakpoint-only('md') {
     display: none !important;
   }
 }

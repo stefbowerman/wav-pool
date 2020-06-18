@@ -101,8 +101,9 @@ section.sprvsn-intro {
     }
 
     &.sprvsn-dots--2 {
-      bottom: 37vh;
+      bottom: 48vh;
       left: 29vw;
+      transform: rotate(90deg);
       display: none;
 
       @include media-breakpoint-up('lg') {

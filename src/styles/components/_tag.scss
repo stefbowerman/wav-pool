@@ -110,9 +110,14 @@
   }
 
   @include media-breakpoint-up('lg') {
-    top: 18%;
-    bottom: 18%;
-    left: 45%;
+    top: 17%;
+    bottom: 7%;
+    right: 14%;
+  }
+
+  @include media-breakpoint-up('xl') {
+    left: 40%;
+    right: 20%;
   }
 }
 

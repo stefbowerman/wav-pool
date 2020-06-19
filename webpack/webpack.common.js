@@ -36,6 +36,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'privacy.html',
       template: Path.resolve(__dirname, '../src/privacy.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'music-supervision.html',
+      template: Path.resolve(__dirname, '../src/music-supervision.html')
     })
   ],
   resolve: {

@@ -9,8 +9,9 @@
 $white:        #fff !default;
 $black:        #000 !default;
 $bright-green: #76ff41;
-$bright-red:   #ff4141;
+$bright-pink:  #f432ca;
 $sick-blue:    #113CFA;
+$acid-green:   #40FA19; // like $bright-green but for backgrounds
 
 // Options
 //
@@ -41,6 +42,8 @@ $link-color:                              #000 !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        lighten($link-color, 15%) !default;
 $link-hover-decoration:                   none !default;
+$link-transition-in:                      color 50ms ease-in-out;
+$link-transition-out:                     color 200ms ease-out;
 
 // Paragraphs
 //
@@ -111,7 +114,7 @@ $font-family-base:            $font-family-sans-serif !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
-$font-size-xs:                $font-size-base * .625 !default;
+$font-size-xs:                $font-size-base * .78 !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;

@@ -16,7 +16,10 @@ export default class GlobeComponent extends BaseComponent {
 
     watcher.enterViewport(() => {
       this.globeArea.classList.add('is-visible');
-      watcher.destroy();
+    });
+
+    watcher.exitViewport(() => {
+      this.globeArea.classList.remove('is-visible');
     });
 
     isAutoplaySupported((support) => {

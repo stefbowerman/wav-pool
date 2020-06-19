@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Catalog | .Wav Pool</title>
+  <meta name="description" content=".Wav Pool is an artist operated music licensing agency based in Los Angeles, with a unique vision for curating ground-breaking music." />  
+  <meta property="og:image" content="/public/share.jpg" />
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
@@ -20,8 +22,9 @@
         <a href="/">.Wav Pool is a music licensing agency</a>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li class="hide-on-mobile"><a href="/">Home</a></li>
             <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/music-supervision">Music Supervision</a></li>
             <li><a href="mailto:info@wav-pool.com" target="_blank">Contact</a></li>
           </ul>
         </nav>
@@ -32,24 +35,40 @@
     <div class="page-header">
       <h1 class="outline-title">Catalog</h1>
     </div>
-    <div class="catalog-holder">
-      <div class="catalog-embed">
-        <iframe src="https://composerly.com/electric-life?embed=true&header=false" frameborder="0"></iframe>
+    <section style="padding-bottom: 5vh;">
+      <div class="catalog-holder">
+        <div class="catalog-embed">
+          <iframe src="https://composerly.com/electric-life?embed=true&header=false" frameborder="0"></iframe>
+        </div>
       </div>
-    </div>
+    </section>
+    <section id="closing" class="closing" style="padding-top: 0;">
+      <div class="container-fluid">
+        <div class="pretext">Need a custom playlist?</div>
+        <div class="hide-on-mobile hide-on-tablet">
+          <a href="mailto:info@wav-pool.com?subject=Custom%20Playlist" class="outline-subtitle" target="_blank">info@wav-pool.com</a>
+        </div>
+        <div class="hide-on-desktop">
+          <div class="closing-buttons">
+            <a href="mailto:info@wav-pool.com" class="btn btn--block" target="_blank">info@wav-pool.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
+  <footer data-component="footer">
     <div class="container-fluid text-center">
       <div class="container">
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/catalog">Catalog</a></li>
+          <li><a href="/music-supervision">Music Supervision</a></li>
           <li><a href="mailto:info@wav-pool.com" target="_blank">Contact</a></li>
           <li><a href="/privacy">Privacy</a></li>
           <li><a href="/faq">FAQ</a></li>
         </ul>
-        <div class="p2">
-          2019 .Wav Pool.  All forms of media displayed on this website are copyright protected.
+        <div class="p3">
+          .Wav Pool.  All forms of media displayed on this website are copyright protected.
         </div>
       </div>
     </div>

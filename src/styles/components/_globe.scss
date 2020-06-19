@@ -20,11 +20,12 @@
 
   .js & {
     transform: scale(0.65);
+    transition: transform 5s cubic-bezier(0.36, 0.29, 0, 1.51);
   }
 
   .js .globe-area.is-visible & {
     transform: scale(1);
-    transition: transform 4s cubic-bezier(0.57, 0.13, 0.31, 1.22);
+    // transition: transform 5s cubic-bezier(0.36, 0.29, 0, 1.51)
   }  
 }
 

@@ -1,0 +1,29 @@
+.closing {
+    text-align: center;
+
+  .pretext,
+  .posttext {
+    text-transform: uppercase;
+
+    @include media-breakpoint-up('md') {
+      font-size: $font-size-lg;
+    }
+  }
+
+  .pretext {
+    margin-bottom: 20px;
+  }
+
+  .posttext {
+    margin-top: 35px;
+  }
+
+  .outline-subtitle {
+    display: block;
+  }
+}
+
+.closing-buttons {
+  max-width: 340px;
+  margin: 0 auto;
+}

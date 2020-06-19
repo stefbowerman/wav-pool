@@ -8,18 +8,21 @@ footer {
   overflow: hidden;
   @include p2;
 
+  a {
+    @include pill-link;
+  }
+
   ul {
     list-style: none;
     padding-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto 30px;
 
     @include media-breakpoint-up('sm') {
       flex-direction: row;
-      margin-bottom: 10px;
     }
 
     li {
@@ -60,11 +63,6 @@ footer {
 
     @include media-breakpoint-up('md') {
       animation-duration: 30s;
-      height: 140px;
-      height: calc(50px + 7vw);
-    }
-
-    @include media-breakpoint-up('xl') {
       background-size: percentage(1/16) auto;
       background-size: calc(6.25vw) auto;
       height: 100px;

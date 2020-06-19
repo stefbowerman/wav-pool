@@ -18,19 +18,20 @@
     cursor: pointer;
 
     &.is-active {
-      color: $bright-red;
+      color: $bright-pink;
     }
   }
 
   @include media-breakpoint-up('md') {
-
     text-align: left;
 
-    &:nth-child(2n) {
+    &:nth-child(1) {
+      order: 1;
       text-align: center;
     }
 
-    &:nth-child(3n) {
+    &:nth-child(3) {
+      order: 2;
       text-align: right;
     }
   }
@@ -96,6 +97,8 @@
   &--fitbit { background-image: url('../images/client-logos/fitbit.jpg'); }
   &--fueltv { background-image: url('../images/client-logos/fueltv.jpg'); }
   &--monster-children { background-image: url('../images/client-logos/monster-children.jpg'); }
+  &--ray-ban { background-image: url('../images/client-logos/rayban.jpg'); }
+  &--apple { background-image: url('../images/client-logos/apple.jpg'); }
 
   @include media-breakpoint-up('md') {
     animation-duration: 10s;
